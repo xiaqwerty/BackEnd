@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+</head>
+<body>
+<form action="/article/" method="post" align="center" enctype="multipart/form-data">
+        <input name="title" id="title" cols="30" rows="3" placeholder="title"></input>
+        <input name="content" id="content" cols="30" rows="30" placeholder="content"></input>
+    <input type="submit" value="提交" >
+</form>
+<a href="/article/1">查询</a>
+<form action="/article/1" method="post" align="center" enctype="multipart/form-data">
+    <input type="hidden" name="_method" value="put">
+    <input name="putTitle" id="putTitle" cols="30" rows="3" placeholder="title"></input>
+    <input name="putContent" id="putContent" cols="30" rows="30" placeholder="content"></input>
+    <input type="submit" value="修改" >
+</form>
+<form action="/article/1" method="post">
+<input type="hidden" name="_method" value="delete">
+    <input type="submit" value="删除">
+</form>
+</body>
+</html>
